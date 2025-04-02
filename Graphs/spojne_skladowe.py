@@ -9,12 +9,11 @@ def ile_spoj_sklad(G): # Stosujemy algorytm DFS z paroma dodatkami
         for v in G[u]:
             if not visited[v]:
                 DFSvisit(G,v)
-
     for u in range(n):
         if not visited[u]:
             cnt+=1
             DFSvisit(G,u)
-
+            #print(visited)
     return cnt
 
 
@@ -32,8 +31,12 @@ Graph = [
     []         # 7
 ]
 
+graf2 = [[1],
+         [2],
+         [3],
+         [0]]
 print(ile_spoj_sklad(Graph))
-
+print(ile_spoj_sklad(graf2))
 
 
 
